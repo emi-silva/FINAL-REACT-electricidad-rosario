@@ -1,0 +1,79 @@
+header {
+  display: flex;
+  justify-content: space-between; /* Espacio uniforme entre los elementos */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(54, 12, 153);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 100px;
+  width: auto;
+}
+
+.brand-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-container {
+  flex: 1;
+  display: flex;
+  justify-content:right ;
+  margin-right: 50px; /* Centra la navegación horizontalmente */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Centra los elementos dentro del nav */
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  align-self: center; /* Asegura que los elementos de la lista se centren verticalmente */
+}
+
+nav a {
+  color: rgb(11, 10, 107);
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.cart {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.cart:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cart {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,57 @@
+.footer {
+  background-color: #f0f0f0; /* Fondo gris claro */
+  color: #333; /* Texto oscuro para mayor contraste */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center; /* Centra los contenidos horizontalmente */
+  align-items: center; /* Alinea los contenidos verticalmente */
+  gap: 20px; /* Espacio entre las secciones */
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1; /* Hace que cada sección ocupe el mismo espacio */
+  text-align: center; /* Centra el texto dentro de las secciones */
+}
+
+.footer-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  text-align: center; /* Centra la lista */
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #014f86; /* Enlace azul */
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ccc; /* Bordes más claros */
+  padding-top: 10px;
+  font-size: 0.9em;
+  width: 100%; /* Ocupa toda la anchura del footer */
+  text-align: center; /* Centra el texto */
+}
+
+.footer-section p a {
+  display: block; /* Muestra los enlaces en una lista vertical */
+  margin: 5px 0; /* Espaciado entre los enlaces */
+  text-align: center; /* Centra los enlaces de redes sociales */
+}

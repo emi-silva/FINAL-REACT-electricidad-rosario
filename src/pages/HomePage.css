@@ -1,0 +1,89 @@
+/* HomePage.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa; /* Fondo azul claro */
+   /* Color de texto oscuro para mejor legibilidad */
+  margin: 0;
+  padding: 0;
+}
+
+.home-page {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #014f86; /* Título azul más oscuro */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #013a63; /* Texto azul más oscuro */
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.highlights {
+  background-color: #b3e5fc; /* Sección destacada con fondo azul claro */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #012a4a; /* Subtítulo azul más oscuro */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.product-highlight {
+  background-color: #81d4fa; /* Fondo azul más claro para los productos destacados */
+  color: #01579b; /* Texto azul oscuro para mejor legibilidad */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+h3 {
+  color: #011f4b; /* Título de producto destacado */
+  font-size: 1.5em;
+}
+
+.highlight-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.highlight-image {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .highlight-images {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
