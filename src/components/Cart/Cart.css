@@ -1,0 +1,73 @@
+.cart {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
+  border-left: 5px solid #200c94;
+}
+
+.cart.open {
+  right: 0;
+}
+
+.close-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9em; /* Tamaño de letra más pequeño */
+}
+
+.cart-item button {
+  background-color: #ADD8E6; /* Azul claro */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9em; /* Tamaño de letra más pequeño */
+}
+
+.cart-item button:hover {
+  background-color: #87CEEB; /* Azul más oscuro */
+}
+
+.confirm-button {
+  background-color: #17045e; /* Azul oscuro */
+  border: none;
+  padding: 8px 16px; /* Tamaño de botón más pequeño */
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 0.9em; /* Tamaño de letra más pequeño */
+}
+
+.confirm-button:hover {
+  background-color: #000080; /* Azul más oscuro */
+}
+
+.cart h2 {
+  color: #17045e; /* Azul oscuro */
+  text-align: center;
+  font-size: 1.2em; /* Tamaño de letra más pequeño */
+}
+
+.cart:hover {
+  background-color: white; /* Fondo blanco sólido */
+}

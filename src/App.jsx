@@ -10,6 +10,7 @@ import './App.css';
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const addToCart = (product) => {
     setCartItems([...cartItems, product]);
@@ -26,16 +27,26 @@ const App = () => {
     setCartItems([]);
   };
 
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
     <Router>
-      <Header />
+      <Header toggleCart={toggleCart} />
       <main>
         <Routes>
           <Route path="/" exact element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products addToCart={addToCart} />} />
         </Routes>
-        <Cart cartItems={cartItems} removeFromCart={removeFromCart} confirmPurchase={confirmPurchase} />
+        <Cart
+          cartItems={cartItems}
+          removeFromCart={removeFromCart}
+          confirmPurchase={confirmPurchase}
+          isOpen={isCartOpen}
+          toggleCart={toggleCart}
+        />
       </main>
       <Footer />
     </Router>

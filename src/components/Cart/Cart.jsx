@@ -2,11 +2,12 @@ import 'react';
 import PropTypes from 'prop-types';
 import './Cart.css';
 
-const Cart = ({ cartItems, removeFromCart, confirmPurchase }) => {
+const Cart = ({ cartItems, removeFromCart, confirmPurchase, isOpen, toggleCart }) => {
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="cart">
+    <div className={`cart ${isOpen ? 'open' : ''}`}>
+      <button className="close-cart" onClick={toggleCart}>X</button>
       <h2>Carrito de Compras</h2>
       {cartItems.length === 0 ? (
         <p>El carrito está vacío</p>
@@ -19,7 +20,7 @@ const Cart = ({ cartItems, removeFromCart, confirmPurchase }) => {
             </div>
           ))}
           <p>Total: ${total}</p>
-          <button onClick={confirmPurchase}>Confirmar Compra</button>
+          <button className="confirm-button" onClick={confirmPurchase}>Confirmar Compra</button>
         </div>
       )}
     </div>
@@ -35,7 +36,9 @@ Cart.propTypes = {
     })
   ).isRequired,
   removeFromCart: PropTypes.func.isRequired,
-  confirmPurchase: PropTypes.func.isRequired
+  confirmPurchase: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  toggleCart: PropTypes.func.isRequired
 };
 
 export default Cart;

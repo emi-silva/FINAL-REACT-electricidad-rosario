@@ -1,15 +1,10 @@
-import { useState } from 'react';
+import 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/images/imageslogo.jpeg'; // Asegúrate de que la ruta sea correcta
 
-const Header = () => {
-  const [cartCount, setCartCount] = useState(0);
-
-  const addToCart = () => {
-    setCartCount(cartCount + 1);
-  };
-
+const Header = ({ toggleCart }) => {
   return (
     <header>
       <div className="logo-container">
@@ -26,11 +21,15 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <div className="cart" onClick={addToCart}>
-        🛒 Carrito ({cartCount})
+      <div className="cart-button" onClick={toggleCart}>
+        🛒 Carrito
       </div>
     </header>
   );
 }
+
+Header.propTypes = {
+  toggleCart: PropTypes.func.isRequired,
+};
 
 export default Header;
